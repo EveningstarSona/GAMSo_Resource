@@ -31,7 +31,7 @@ func _ready():
 			timers.push_back(get_node("Timer" + str(i+1)))
 			sprites.push_back(get_node("example_sprite" + str(i+1)))
 	for i in range(amount):
-		minigamekeys.push_back(FMinigameKey.new(i, keys[i], times, timers[i], sprites[i]))
+		minigamekeys.push_back(FishingMinigameKey.new(i, keys[i], times, timers[i], sprites[i]))
 	for i in range(amount):
 		minigamekeys[i].printself()
 		minigamekeys[i].timer.start()

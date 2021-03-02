@@ -1,6 +1,6 @@
 extends Object
 
-class_name FMinigameKey
+class_name FishingMinigameKey
 
 var id: int
 var key: String
