@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://FishingMinigameScript.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=1]
+min_value = 0.18
+max_value = 0.2
+bake_resolution = 1
+_data = [ Vector2( 0.461538, 0.18 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0.541176, 0.0509804, 0.807843, 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 0, 70, 1366, 70 )
+width = 50.0
+width_curve = SubResource( 1 )
+default_color = Color( 0.137255, 0.25098, 0.803922, 1 )
+gradient = SubResource( 2 )
+
+[node name="Playing" type="Label" parent="."]
+margin_left = 19.8467
+margin_top = 14.4503
+margin_right = 521.847
+margin_bottom = 159.45
+text = "Playing"
+__meta__ = {
+"_edit_use_anchors_": false
+}

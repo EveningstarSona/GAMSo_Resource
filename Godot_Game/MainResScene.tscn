@@ -1,3 +1,27 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ph2.jpg" type="Texture" id=1]
+[ext_resource path="res://ph1.png" type="Texture" id=2]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="KitchenButton" type="TextureButton" parent="."]
+margin_right = 366.0
+margin_bottom = 768.0
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CustomersButton" type="TextureButton" parent="."]
+margin_left = 1000.0
+margin_right = 1366.0
+margin_bottom = 768.0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
