@@ -1,4 +1,4 @@
-extends TextureButton
+extends Node2D
 
 
 # Declare member variables here. Examples:
@@ -14,3 +14,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_NewGameButton_pressed():
+	get_tree().change_scene("res://PromptTutorialScene.tscn")
+
+
+func _on_LoadGameButton_pressed():
+	get_tree().change_scene("res://SavesScene.tscn")
+
+
+func _on_OptionsButton_pressed():
+	get_tree().change_scene("res://ConfigMenuScene.tscn")
