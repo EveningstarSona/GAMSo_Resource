@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/KitchenBackground.jpg" type="Texture" id=1]
+[ext_resource path="res://ResScenes/KitchenScript.gd" type="Script" id=2]
+[ext_resource path="res://ResScenes/MainResCamera.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 100, 383 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 1024, 384 )
+
+[node name="MainResButton" type="TextureButton" parent="."]
+margin_left = 3.0
+margin_top = 645.0
+margin_right = 2048.0
+margin_bottom = 770.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 683, 383 )
+current = true
+limit_left = -100000
+limit_top = -100000
+limit_right = 100000
+limit_bottom = 100000
+script = ExtResource( 3 )
+
+[node name="LeftArea" type="Area2D" parent="Camera2D"]
+position = Vector2( -583, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/LeftArea"]
+shape = SubResource( 1 )
+
+[node name="RightArea" type="Area2D" parent="Camera2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/RightArea"]
+position = Vector2( 583, 0 )
+shape = SubResource( 1 )
+[connection signal="pressed" from="MainResButton" to="." method="_on_MainResButton_pressed"]
+[connection signal="mouse_entered" from="Camera2D/LeftArea" to="." method="_on_LeftArea_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/LeftArea" to="." method="_on_LeftArea_mouse_exited"]
+[connection signal="mouse_entered" from="Camera2D/RightArea" to="." method="_on_RightArea_mouse_entered"]
+[connection signal="mouse_exited" from="Camera2D/RightArea" to="." method="_on_RightArea_mouse_exited"]

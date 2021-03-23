@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://MainMenuScript.gd" type="Script" id=1]
+[ext_resource path="res://MenuScenes/MainMenuScript.gd" type="Script" id=1]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -24,6 +24,16 @@ __meta__ = {
 margin_top = 512.0
 margin_right = 1366.0
 margin_bottom = 768.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 599.722
+margin_top = 355.298
+margin_right = 962.722
+margin_bottom = 729.298
+text = "main menu desu yo"
 __meta__ = {
 "_edit_use_anchors_": false
 }

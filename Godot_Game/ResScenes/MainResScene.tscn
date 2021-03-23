@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://ph2.jpg" type="Texture" id=1]
-[ext_resource path="res://ph1.png" type="Texture" id=2]
+[ext_resource path="res://assets/ph2.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/ph1.png" type="Texture" id=2]
+[ext_resource path="res://ResScenes/MainResScript.gd" type="Script" id=3]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="KitchenButton" type="TextureButton" parent="."]
 margin_right = 366.0
@@ -25,3 +27,5 @@ expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="KitchenButton" to="." method="_on_KitchenButton_pressed"]
+[connection signal="pressed" from="CustomersButton" to="." method="_on_CustomersButton_pressed"]

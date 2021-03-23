@@ -3,7 +3,7 @@ extends Node2D
 var rng = RandomNumberGenerator.new()
 var amount = 13
 var current_key = null
-var example_sprite = load("res://example_sprite.tscn")
+var example_sprite = load("res://GatherScenes/example_sprite.tscn")
 var keys = []
 var times = []
 var timers = []

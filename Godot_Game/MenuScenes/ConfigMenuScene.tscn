@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 434.665
+margin_top = 377.147
+margin_right = 1431.67
+margin_bottom = 1190.15
+text = "config menu desu ka? hai, config menu desu"
+__meta__ = {
+"_edit_use_anchors_": false
+}

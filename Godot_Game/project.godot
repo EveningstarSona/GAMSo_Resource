@@ -10,18 +10,18 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Object",
-"class": "FMinigameKey",
+"class": "FishingMinigameKey",
 "language": "GDScript",
-"path": "res://FishingMinigameKey.gd"
+"path": "res://GatherScenes/FishingMinigameKey.gd"
 } ]
 _global_script_class_icons={
-"FMinigameKey": ""
+"FishingMinigameKey": ""
 }
 
 [application]
 
 config/name="GAMSo_2021"
-run/main_scene="res://MainMenuScene.tscn"
+run/main_scene="res://MenuScenes/MainMenuScene.tscn"
 config/icon="res://icon.png"
 
 [display]

@@ -16,8 +16,13 @@ func _ready():
 #	pass
 
 
-func _on_ReadyButton_pressed():
-	if $CutsceneButton:
-		get_tree().change_scene("res://CutScene.tscn")
-	else:
-		get_tree().change_scene("res://MainResScene.tscn")
+func _on_NewGameButton_pressed():
+	get_tree().change_scene("res://MenuScenes/PromptTutorialScene.tscn")
+
+
+func _on_LoadGameButton_pressed():
+	get_tree().change_scene("res://MenuScenes/SavesScene.tscn")
+
+
+func _on_OptionsButton_pressed():
+	get_tree().change_scene("res://MenuScenes/ConfigMenuScene.tscn")
